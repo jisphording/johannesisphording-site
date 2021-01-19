@@ -1,0 +1,79 @@
+# System files
+# ------------
+
+Icon
+.DS_Store
+ffmpeg2pass-0.log
+
+# Files meant for development only
+# ---------------
+
+/node_modules/*
+/*lock.json
+/TODO.md
+*.zip
+
+# Data that is only meant for deployment
+# ---------------
+/.cache
+/dist/*
+
+# Do not track Kirby CMS and Media Files in Repository
+# ---------------
+
+/kirby/*
+/media/*
+/assets/img/*
+/video/*
+!/media/index.html
+
+# Do not track font files
+# ---------------
+/assets/fonts/*
+
+# Lock files
+# ---------------
+.lock
+
+# Do not track plugins in repository
+# ---------------
+/site/plugins/*
+# except site methods
+!/site/plugins/site-methods
+
+# Do not track Content images
+# ---------------
+
+/favicon.ico
+/content/**/*.jpg
+/content/**/*.webp
+/content/**/*.png
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+/.htaccess
+/.vscode/*
+
+# Cache Files
+# ---------------
+
+/site/cache/*
+!/site/cache/index.html
+
+# Accounts
+# ---------------
+
+/site/accounts/*
+!/site/accounts/index.html
+
+# Sessions
+# ---------------
+
+/site/sessions/*
+!/site/sessions/index.html
+
+# License
+# ---------------
+/site/config/.license
