@@ -1,0 +1,426 @@
+@charset 'UTF-8';
+
+/* -----  CSS MODULES  ------------------------------------------------------- */
+
+@use 'templates/colors';
+@use 'templates/webfonts';
+@use 'templates/typography';
+@use 'templates/grid';
+
+@use 'templates/default';
+
+@use 'templates/_old-index-480px.scss';
+@use 'templates/_old-index-1000px.scss';
+@use 'templates/_old-index-1440px.scss';
+
+/* --------------------------------------------------------------------------- */
+/* BASIC STYLES BEYOND DEFAULTS
+/* --------------------------------------------------------------------------- */
+
+.content {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+    padding-right: 0.5rem;
+}
+
+.bildunterschrift {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+/* -----  HEADER  ------------------------------------------------------------ */
+/* --------------------------------------------------------------------------- */
+
+.header {
+    padding-top: 0.75rem;
+}
+
+.branding {
+    width: 50%;
+    margin: 1em 0;
+    margin-left: 1rem;
+}
+
+.branding a {
+    border: none;
+}
+
+/* -----  MENU  -------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+nav {
+    margin: 0 0.5rem;
+}
+
+/* -----  HOMEPAGE  ---------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.projects-section-more,
+.articles-section-more {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.articles-section-more {
+    margin-bottom: 1.5rem;
+}
+
+.projects-section ul:last-of-type {
+    margin-bottom: 0;
+}
+
+.articles-section {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.articles-section h3 {
+    padding-top: 1.5em;
+}
+
+/* -----  PROJECT SINGLE VIEW ------------------------------------------------ */
+/* --------------------------------------------------------------------------- */
+
+.project-gallery li {
+    margin-bottom: 0.75rem;
+}
+
+.project-gallery li:last-of-type {
+    margin-bottom: 0;
+}
+
+/* -----  ABOUT  ------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.mood img {
+    margin-top: 0.75rem;
+}
+
+.moods li {
+    padding: 0.5rem;
+}
+
+.moods li:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.moods li:last-of-type {
+    margin-bottom: -0.25rem;
+    padding-bottom: 0;
+}
+
+.locations .visitenkarte {
+    margin-bottom: 1rem;
+}
+
+.locations .visitenkarte:last-of-type {
+    margin-bottom: -0.275rem;
+}
+
+.linklist p {
+    float: left;
+    width: 100%;
+}
+
+/* -----  LEGAL & CREDITS  --------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.legal .showreel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* -----  CHAPTER LINES SEPERATING LONG TEXTS  ------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+hr {
+    font-size: 1rem;
+    height: 1.2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.6rem;
+    padding: 0 0.75rem;
+    color: var(--color-light-gray);
+    width: 100%;
+}
+
+hr::before {
+    content: "";
+    position: relative;
+    display: block;
+    background: currentColor;
+    height: 2px;
+    top: calc(50% + 1px);
+}
+
+hr::after {
+    content: "01";
+    font-weight: 800;
+    color: var(--color-light-gray);
+    background: var(--color-white);
+    position: relative;
+    padding: 0 0.25rem;
+    top: 0.025rem;
+}
+
+/* -----  KEYVISUAL  --------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.intro {
+    margin-bottom: 1rem;
+}
+
+.meta {
+    float: left;
+    font-size: 0.85rem;
+    line-height: 1.25em;
+    width: 50%;
+}
+
+.social-options {
+    padding: 0;
+}
+
+.keyvisual {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    position: relative;
+}
+
+.keyvisual img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.keyvisual h1 {
+    position: absolute;
+    margin: 0;
+    bottom: 0.15em;
+}
+
+/* -----  ARTICLES  ---------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.rel-article-showcase,
+.rel-article-showcase-item {
+    position: relative;
+    /*- unverändert -*/
+}
+
+.rel-article-showcase-item {
+    margin-bottom: 1.25rem;
+    /*- unverändert -*/
+}
+
+.rel-article-showcase-link {
+    border: none;
+    display: block;
+    position: relative;
+    /*- unverändert -*/
+}
+
+.rel-article-showcase-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*- unverändert -*/
+}
+
+/* Placing the whole showcase-title on top of link box ... */
+.rel-article-showcase-title {
+    width: 100%;
+    /* Vertically center the caption */
+    position: absolute;
+    -webkit-transition: 0.5s color;
+    transition: 0.5s color;
+    will-change: color;
+    /*- unverändert -*/
+    color: var(--color-white);
+    text-align: left;
+    height: auto;
+    line-height: 0.85em;
+    margin-top: 25%;
+}
+
+/* ... and displaying the marked portion on bottom of link box */
+.rel-article-showcase-title mark {
+    position: relative;
+    /*- unverändert -*/
+}
+
+.rel-article-showcase .tags {
+    color: var(--color-white);
+    margin: 0 auto;
+    /*- unverändert -*/
+    display: block;
+    text-align: left;
+    width: auto;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.rel-article-showcase .tags h4:first-of-type {
+    position: absolute;
+    top: 1rem;
+}
+
+.rel-article-showcase .tags h4 {
+    font-weight: 900;
+    font-size: 0.85em;
+    position: absolute;
+    bottom: 0.75rem;
+}
+
+.rel-article-showcase .tags p {
+    text-transform: none;
+    font-size: 0.85em;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.75rem;
+}
+
+.rel-article-showcase-link:hover .rel-article-showcase-title,
+.rel-article-showcase-link:focus .rel-article-showcase-title,
+.rel-article-showcase-link:hover .rel-article-showcase-title mark,
+.rel-article-showcase-link:focus .rel-article-showcase-title mark {
+    color: var(--color-highlight);
+    /*- unverändert -*/
+}
+
+.rel-article-showcase-link:hover .rel-article-showcase-image,
+.rel-article-showcase-link:focus .rel-article-showcase-image {
+    opacity: 0.8;
+    /*- unverändert -*/
+}
+
+@media (any-hover: none) {
+    .rel-article-showcase-caption {
+        /* The media query, enclosing these rules matches only
+       touch-screen devices that do not support hover due
+       to the lack of a pointing device like a mouse.
+       It does not work in all mobile browsers, but
+       progressively enhances the experience on supported
+       devices. Tested in Safari (iOS) 9.3 */
+        opacity: 1;
+        /* Reset will-change property to keep it from eating
+       up unneccessary resources on touch-only devices */
+        will-change: auto;
+    }
+}
+
+/* -----  RELATED PROJECTS/ARTICLES  ----------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.related {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 1.5rem 0 0 0;
+    margin-bottom: 1.5rem;
+}
+
+.related a {
+    border: none;
+}
+
+/* -----  VISITENKARTE  ------------------------------------------------------ */
+/* --------------------------------------------------------------------------- */
+
+.visitenkarte {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.visitenkarte-overlay {
+    background: #f3f3f3;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1.25rem;
+    left: 1rem;
+}
+
+.visitenkarte ul {
+    height: 95%;
+    margin: 0;
+    margin-top: 5%;
+}
+
+.visitenkarte li {
+    height: 25%;
+}
+
+.visitenkarte li:nth-of-type(1) {
+    height: 25%;
+}
+
+.visitenkarte li:nth-of-type(2) {
+    height: 30%;
+}
+
+.visitenkarte em {
+    font-family: "Rajdhani", Georgia, serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.visitenkarte strong {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+/* -----  FOOTER  ------------------------------------------------------------ */
+/* --------------------------------------------------------------------------- */
+
+.footer .branding {
+    margin-bottom: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer em {
+    font-family: "Rajdhani", Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.footer .legal {
+    color: #d8d8d8;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer .legal a,
+.footer .legal p {
+    font-weight: 400;
+}
+
+.footer .legal a {
+    text-decoration: underline;
+}
