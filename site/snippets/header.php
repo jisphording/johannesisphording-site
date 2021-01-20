@@ -44,7 +44,7 @@
 	<div class="page page--<?= $page->uri() ?>">
 	  
 		<!-- LOCAL PAGE HEADER -->
-		<header id="header" class="header wrap" role="banner">
+		<header id="header" class="header" role="banner">
 
 			<!-- Logo / Branding -->
 			<div class="branding">
