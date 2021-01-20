@@ -68,7 +68,7 @@ Kirby::plugin('studio-isphording/site-methods', [
 
 			$subpages = kirby()->site()->pages()->find($page)->children()->limit($limit); ?>
 
-			<ul class="showcase grid gutter-1 loading content slide-wrapper">
+			<ul class="showcase grid gutter-1 loading slide-wrapper">
 
 			<?php foreach($subpages as $subpage): ?>
 
@@ -76,15 +76,22 @@ Kirby::plugin('studio-isphording/site-methods', [
 					<a href="<?= $subpage->url() ?>" class="showcase-link">
 
 						<div class="showcase-image-wrap">
-							<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): 
-							// thumb for all browsers
-							$thumb = $image->crop(500, 600, 35);
-							// hq thumb is loaded were interaction observer is available
-							$thumbHQ = $image->crop(750, 900, 75); ?>
-								<img src="<?= $thumb->url() ?>" data-src="<?= $thumbHQ->url() ?>" alt="Thumbnail for <?= $subpage->title() ?>" class="showcase-image" />
+							<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): ?>
+
+								<!-- Image Wrapper -->
+								<figure class="grid__item grid__item--image">
+
+									<!-- Image -->
+									<img class="grid__image showcase-image" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
+												src="<?= $image -> url()?>" alt="Project: <?= $subpage->title() ?>" loading="lazy" 
+												style="height:<?= floor(($image -> height()) * 0.5) ?>; width:<?= floor(($image -> width()) * 0.5) ?>;">
+
+								</figure>
+
 							<?php endif ?>
 						</div>
 
+						<!-- Image/Project Title -->
 						<div class="showcase-caption">
 							<h1 class="showcase-title"><?= $subpage->title() ?></h1>
 							
