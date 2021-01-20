@@ -7,8 +7,11 @@ return array (
   'locale' => 'es_ES',
   'name' => 'Español',
   'translations' => [
+    'Project Description' => 'Descripción de Proyecto',
+    'Recent articles' => 'Textos recientes',
+    'Related projects' => 'Proyectos relacionados',
+    'Related articles' => 'Textos relacionados',
     'Show all projects' => 'Mostrar toto los proyectos',
-    'Show all articles' => 'Mostrar todo los textos',
-    'Recent articles' => 'Textos recientes'
+    'Show all articles' => 'Mostrar todo los textos'
   ]
 );
