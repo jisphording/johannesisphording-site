@@ -1,47 +1,101 @@
+@charset 'UTF-8';
+
+/* --------------------------------------------------------------------------- */
+/* SENSIBLE DEFAULTS & NORMALIZATION */
+/* --------------------------------------------------------------------------- */
+
+/* This Stylesheet contains defaults/resets/normalization that gives a blank slate and can be used for most of the projects */
+
 *,
 *:after,
-*:before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*:before {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    width: 100%;
+    color: var(--color-black);
+    background-color: var(--color-bg-white);
+    /* Always show the vertical scrollbar to prevent jumps
+       of page content after navigating from a very short page
+       that does not scroll to a long pager */
+    overflow-y: scroll;
+    /* Setting this to default prevents the cursors from
+       changing when hovering blocks of text or whitespace,
+       which is less distracting */
+    cursor: default;
+    /* Neccessary for sticky footer. */
+    position: relative;
+    min-height: 100%;
+    /* Prevent adjustments of font size after orientation
+       changes in IE and iOS. */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
     min-width: 280px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Firefox specific rule */
+@-moz-document url-prefix() {
+    body {
+        font-weight: bolder !important;
+    }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    /* Add correct display for IE 9- and some newer browsers */
+    display: block;
+}
+
+mark {
+    background-color: var(--color-bg-white);
 }
 
 .text {
-    max-width: 35rem;
-    margin: 0 auto;
+    max-width: 100%;
 }
-  
+
 .page > * {
     max-width: var(--content-width);
     margin: 0 auto;
 }
 
-li {
+i,
+em {
+    font-style: normal;
+}
+
+ul,
+ol {
     list-style: none;
 }
- 
-a {
-    color: currentColor;
-}
-  
-p {
-    margin: 0;
-}
-  
-figure {
-    margin: 0;
-    padding: 0;
-}
-  
+
 img,
 figure,
 video {
     all: unset;
+    border-style: none;
     width: 100%;
+    height: auto;
     display: block; // to remove the small gap when there's whitespace between image tags
 }
 
@@ -49,4 +103,14 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+::-moz-selection {
+    background: var(--color-highlight);
+    color: var(--color-black);
+}
+
+::selection {
+    background: var(--color-highlight);
+    color: var(--color-black);
 }
