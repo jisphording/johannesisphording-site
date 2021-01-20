@@ -67,7 +67,7 @@ summary {
 }
 
 mark {
-    background-color: var(--color-bg-white);
+    background-color: rgba($color: var(--color-highlight), $alpha: 0);
 }
 
 .text {
