@@ -3,7 +3,6 @@
   <main class="main landing" role="main">
     <!-- LOCAL PAGE HEADER -->
     <header>
-		<!
       	<section class="showreel">
 			<!-- Showreel -->
 			<video playsinline autoplay muted loop poster="<?= $site->uri() . '/content/home/' . $page->showreel() ?>.jpg">
@@ -14,7 +13,7 @@
 			</video>
 
 			<!-- Showreel Headline -->
-			<h1><?= $page->title() ?></h1>
+			<h1 class="showreel--title"><?= $page->title() ?></h1>
       	</section>
     </header>
   
