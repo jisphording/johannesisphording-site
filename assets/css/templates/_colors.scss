@@ -1,0 +1,9 @@
+/* Color Definitions */
+:root {
+    --color-white: #ffffff;
+    --color-highlight: #b4e7f8; 
+
+    --color-bg-white: #ffffff;
+}  
+
+.white-bg { background: var(--color-bg-white); }
