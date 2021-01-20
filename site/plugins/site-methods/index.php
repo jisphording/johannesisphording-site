@@ -53,6 +53,54 @@ Kirby::plugin('studio-isphording/site-methods', [
 			</ul>
 
 			<?php
+		},
+
+		// DISPLAY SHOWCASE
+		// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+		//
+		// Pulling all related child pages of a given page into the loop to display
+		// as the main showcase for projects or articles
+		'displayShowcase' => function ($page = '', $limit = 8) {
+
+			if( !is_int( $limit) ) {
+				$limit = 8;
+			}
+
+			$subpages = kirby()->site()->pages()->find($page)->children()->limit($limit); ?>
+
+			<ul class="showcase grid gutter-1 loading content slide-wrapper">
+
+			<?php foreach($subpages as $subpage): ?>
+
+				<li class="showcase-item column slide-item">
+					<a href="<?= $subpage->url() ?>" class="showcase-link">
+
+						<div class="showcase-image-wrap">
+							<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): 
+							// thumb for all browsers
+							$thumb = $image->crop(500, 600, 35);
+							// hq thumb is loaded were interaction observer is available
+							$thumbHQ = $image->crop(750, 900, 75); ?>
+								<img src="<?= $thumb->url() ?>" data-src="<?= $thumbHQ->url() ?>" alt="Thumbnail for <?= $subpage->title() ?>" class="showcase-image" />
+							<?php endif ?>
+						</div>
+
+						<div class="showcase-caption">
+							<h1 class="showcase-title"><?= $subpage->title() ?></h1>
+							
+							<div class="tags">
+								<p><?= $subpage->tags() ?></p>
+							</div>
+						</div>
+
+					</a>
+				</li>
+
+			<?php endforeach ?>
+
+			</ul>
+
+			<?php
 		}
   ] // end site methods
 ]); 
