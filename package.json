@@ -66,6 +66,7 @@
     "imagemin-webp": "^5.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-pwa-manifest": "^3.0.10",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "sass-lint": "^1.13.1"
   }
 }

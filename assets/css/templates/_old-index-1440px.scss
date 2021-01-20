@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*  
+  This CSS File is used as the BREAKPOINT for above 1440px (Medium Devices prob. 16:9) 
+*/
+
+@media screen and (min-width: 1440px) { 
+
+  .showcase h1 {
+    font-size: 5vw;
+  }
+
+  .page {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+} /* Closing the Media Query */
+
+@media screen and (min-width: 1680px) { 
+
+  .showcase h1 {
+    font-size: 4.5vw;
+  }
+
+  .page {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+} /* Closing the Media Query */
