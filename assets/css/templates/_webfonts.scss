@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+/* WEBFONT DEFINITIONS */
+
+// ROBOTO MONO - GOOGLE FONTS
+@font-face {
+    font-family: 'Roboto Mono';
+    font-display: auto;
+    font-weight: 400;
+    font-style: normal;
+    src: local("Roboto Mono Medium"), 
+         url(../../fonts/RobotoMono-Medium.ttf) format("ttf");
+}
+  
+// RAJDHANI - GOOGLE FONTS
+@font-face {
+    font-family: 'Rajdhani';
+    font-display: auto;
+    font-weight: 700;
+    font-style: normal;
+    src: local("Rajdhani"), 
+        url(../../fonts/Rajdhani-Bold.ttf) format("ttf");
+}
