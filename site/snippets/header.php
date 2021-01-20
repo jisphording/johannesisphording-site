@@ -17,6 +17,24 @@
 	<!-- main css file for styling -->
 	<?= css(['dist/index.css', '@auto']) ?>
 
+	<!-- Enabling a very basic Progressive Web App Manifest in case the user has no internet connection -->
+	<link rel="manifest" href="/dist/manifest.webmanifest" crossorigin="use-credentials">
+
+	<!-- Manually adding the apple touch icon for PWA here -->
+	<link rel="apple-touch-icon" href="/dist/emblem-quadrat-192x192.png" />
+
+	<!-- Enable non-render-blocking quality for Google Fonts -->
+	<!-- Connect to domain of font files -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- optionally increase loading priority -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap">
+	<!-- async CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+	<!-- no-JS fallback -->
+	<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap">
+	</noscript>
+
 </head>
 
 <!-- SITE BODY -->
