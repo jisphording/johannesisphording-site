@@ -1,22 +1,30 @@
 <?php snippet('header') ?>
 
-	<main class="main" role="main">
+<!-- PROJECT PAGE MAIN CONTENT -->
+<main class="main" role="main">
 
-		<!-- LOCAL PAGE HEADER -->
-		<header>
-			<!-- Intro -->
-			<div class="intro text <?= $page ?>">
-				<?= $page->text()->kirbytext() ?>
-			</div>
-		</header>
-		
-		<div>
-		
+	<!-- LOCAL PAGE HEADER -->
+	<header>
+		<!-- Intro -->
+		<div class="intro text <?= $page ?>">
+			<?= $page->text()->kirbytext() ?>
+		</div>
+	</header>
+
+	<!-- PROJECT SHOWCASE -->
+	<section class="projects__showcase">
+
 		<!-- Showcase Loop -->
 		<?php $site->displayShowcase('projects', 99) ?>
 
-		</div>
+		<!-- Link to all projects -->
+		<p class="projects__showcase--more">
+			<a href="<?= page('projects')->url() ?>" class="btn"><?php echo t('Show all projects') ?></a>
+		</p>
 
-	</main>
+	</section>
+
+</main>
+<!-- END - PROJECT PAGE MAIN CONTENT -->
 
 <?php snippet('footer') ?>
