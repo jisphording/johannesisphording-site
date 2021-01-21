@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+// --------------------------------------------------------------------------- //
+// ABOUT PAGE
+// --------------------------------------------------------------------------- //
+
+.mood img {
+    margin-top: 0.75rem;
+}
+
+.moods li {
+    padding: .5rem 0;
+}
+
+.moods li:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.moods li:last-of-type {
+    margin-bottom: -0.25rem;
+    padding-bottom: 0;
+}
+
+.linklist p {
+    float: left;
+    width: 100%;
+}
