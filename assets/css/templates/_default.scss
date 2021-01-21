@@ -1,10 +1,10 @@
 @charset 'UTF-8';
 
-/* --------------------------------------------------------------------------- */
-/* SENSIBLE DEFAULTS & NORMALIZATION */
-/* --------------------------------------------------------------------------- */
+// --------------------------------------------------------------------------- //
+// SENSIBLE DEFAULTS & NORMALIZATION //
+// --------------------------------------------------------------------------- //
 
-/* This Stylesheet contains defaults/resets/normalization that gives a blank slate and can be used for most of the projects */
+// This Stylesheet contains defaults/resets/normalization that gives a blank slate and can be used for most of the projects //
 
 *,
 *:after,
@@ -20,19 +20,19 @@ html {
     width: 100%;
     color: var(--color-black);
     background-color: var(--color-bg-white);
-    /* Always show the vertical scrollbar to prevent jumps
-       of page content after navigating from a very short page
-       that does not scroll to a long pager */
+    // Always show the vertical scrollbar to prevent jumps
+    // of page content after navigating from a very short page
+    // that does not scroll to a long pager //
     overflow-y: scroll;
-    /* Setting this to default prevents the cursors from
-       changing when hovering blocks of text or whitespace,
-       which is less distracting */
+    // Setting this to default prevents the cursors from
+    // changing when hovering blocks of text or whitespace,
+    // which is less distracting //
     cursor: default;
-    /* Neccessary for sticky footer. */
+    // Neccessary for sticky footer. //
     position: relative;
     min-height: 100%;
-    /* Prevent adjustments of font size after orientation
-       changes in IE and iOS. */
+    // Prevent adjustments of font size after orientation
+    // changes in IE and iOS. //
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -43,7 +43,7 @@ body {
     padding: 0;
 }
 
-/* Firefox specific rule */
+// Firefox specific rule //
 @-moz-document url-prefix() {
     body {
         font-weight: bolder !important;
@@ -62,7 +62,7 @@ menu,
 nav,
 section,
 summary {
-    /* Add correct display for IE 9- and some newer browsers */
+    // Add correct display for IE 9- and some newer browsers //
     display: block;
 }
 
@@ -102,4 +102,56 @@ video {
 ::selection {
     background: var(--color-highlight);
     color: var(--color-black);
+}
+
+// --------------------------------------------------------------------------- //
+// SITE SPECIFIC DEFAULTS //
+// --------------------------------------------------------------------------- //
+
+// Here come a few default settings that are not further defined in any other module/template
+
+.main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+nav {
+
+    // 'underline' that goes behind text //
+    a:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: .125rem;
+        background: var(--color-highlight);
+        height: .35rem;
+        z-index: -1;
+    }
+}
+
+article {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    overflow: hidden;
+    
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+article:first-of-type,
+article:first-of-type p {
+    margin-top: 0;
+}
+
+.bildunterschrift {
+    color: var(--color-gray);
+    margin-top: .5rem;
+}
+
+.social-options {
+    margin-bottom: 1rem;
 }
