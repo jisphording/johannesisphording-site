@@ -1,0 +1,14 @@
+#########################
+## Sample Sass Lint File
+#########################
+
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: true
+# Rule Configuration
+rules:
+  indentation:
+    - 2
+    -
+      size: 4
