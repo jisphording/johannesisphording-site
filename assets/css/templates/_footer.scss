@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+// --------------------------------------------------------------------------- //
+// HEADER & NAVIGATION
+// --------------------------------------------------------------------------- //
+
+footer {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+
+    .branding {
+        width: 50%;
+        margin: 1em 0;
+    }
+
+    em {
+        font-family: var(--font-sans);
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+
+    .section__bottom {
+        margin-top: 2rem;
+        margin-bottom: 1.25rem;
+        color: var(--color-gray);
+
+        a:before {
+            display: none;
+        }
+    
+        a {
+            text-decoration: underline;
+        }
+    }
+} 
