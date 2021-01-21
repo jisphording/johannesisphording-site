@@ -258,6 +258,29 @@
 }
 
 // --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1920px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1920px) {
+    .intro h1 {
+        font-size: 6vw;
+    }
+
+    .projects__showcase {
+        // slightly more whitespace on showcase pages
+        padding-top: 4rem;
+    }
+
+    .projects__showcase h1 {
+        font-size: 6vw;
+    }
+
+    .projects__showcase--more {
+        margin-top: 4rem;
+    }
+}
+
+// --------------------------------------------------------------------------- //
 // MEDIA QUERY -> OTHER
 // --------------------------------------------------------------------------- //
 

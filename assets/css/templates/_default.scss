@@ -262,3 +262,18 @@ hr::after {
         margin-bottom: 3rem;
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1920px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1920px) {
+    .main {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+
+    article {
+        width: 60%;
+    }
+}
