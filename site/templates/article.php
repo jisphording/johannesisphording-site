@@ -1,6 +1,7 @@
 <?php snippet('header') ?>
 
-<main class="main" role="main">
+<!-- ARTICLE SINGLE VIEW MAIN CONTENT -->
+<main class="main article__single" role="main">
 	<article class="article">
 
 		<!-- LOCAL PAGE HEADER -->
@@ -12,18 +13,19 @@
 		</div>
 		
 	</article>
-
-	<!-- RELATED CONTENT -->
-    <section class="related__showcase">
-		<h3><?php echo t('Related articles') ?></h3>
-      
-		<div>    
-			<!-- Sub Pages Loop -->
-			<?php $site->pullRelatedPages('articles') ?>
-		</div>
-
-	</section>
-	<!-- END - RELATED CONTENT -->
 </main>
+<!-- END - ARTICLE SINGLE VIEW MAIN CONTENT -->
+
+<!-- RELATED CONTENT -->
+<section class="related__showcase">
+	<h3><?php echo t('Related articles') ?></h3>
+      
+	<div>    
+		<!-- Sub Pages Loop -->
+		<?php $site->pullRelatedPages('articles') ?>
+	</div>
+
+</section>
+<!-- END - RELATED CONTENT -->
 
 <?php snippet('footer') ?>
