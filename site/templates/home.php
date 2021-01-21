@@ -1,6 +1,8 @@
 <?php snippet('header') ?>
 
-  <main class="main landing" role="main">
+<!-- HOME/LANDING PAGE MAIN CONTENT -->
+<main class="main landing" role="main">
+
     <!-- LOCAL PAGE HEADER -->
     <header>
       	<section class="showreel">
@@ -18,38 +20,40 @@
     </header>
   
 	<!-- PROJECT SHOWCASE -->
-    <section class="projects-section">
+    <section class="projects__showcase">
 
 		<!-- Showcase Loop -->
 		<?php $site->displayShowcase('projects', 4) ?>
 
 		<!-- Link to all projects -->
-		<p class="projects-section-more">
+		<p class="projects__showcase--more">
 			<a href="<?= page('projects')->url() ?>" class="btn"><?php echo t('Show all projects') ?></a>
 		</p>
       
-    </section>
+	</section>
 	
-	<!-- RELATED SHOWCASE -->
-    <section class="related__showcase">	
+</main>
+<!-- END - HOME/LANDING PAGE MAIN CONTENT -->
+	
+<!-- RELATED SHOWCASE -->
+<section class="related__showcase">	
       
-		<h3><?php echo t('Recent articles') ?></h3>
+	<h3><?php echo t('Recent articles') ?></h3>
 		
-		<!-- Section Description -->
-        <div class="intro text">
-          <?= $page->intro()->kirbytext() ?>
-        </div>
+	<!-- Section Description -->
+    <div class="intro text">
+        <?= $page->intro()->kirbytext() ?>
+    </div>
 
-        <!-- Sub Pages Loop -->
-        <?php $site->pullRelatedPages('articles') ?>
+    <!-- Sub Pages Loop -->
+    <?php $site->pullRelatedPages('articles') ?>
 
-		<!-- Link to all articles -->
-        <p class="articles-section-more">
-			<a href="<?= page('articles')->url() ?>" class="btn"><?php echo t('Show all articles') ?></a>
-		</p>
+	<!-- Link to all articles -->
+    <p class="related__showcase--more">
+		<a href="<?= page('articles')->url() ?>" class="btn"><?php echo t('Show all articles') ?></a>
+	</p>
       
-    </section>
-
-  </main>
+</section>
+<!-- END - RELATED SHOWCASE -->
 
 <?php snippet('footer') ?>
