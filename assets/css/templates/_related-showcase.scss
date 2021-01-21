@@ -1,0 +1,123 @@
+@charset 'UTF-8';
+
+// --------------------------------------------------------------------------- //
+// RELATED SHOWCASE SECTION
+// --------------------------------------------------------------------------- //
+
+.related__showcase {
+    background: var(--color-black);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+
+    h3 {
+
+    }
+
+    .intro {
+        margin-bottom: 1.5rem;
+    }
+
+    mark {
+        color: var(--color-white);
+    }
+}
+
+.related__showcase--caption {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 0;
+    bottom: 0;
+    color: var(--color-white);
+}
+
+.related__showcase--item {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+// REFACTOR OLD STYLES
+// --------------------------------------------------------------------------- //
+
+.related__showcase--link {
+    border: none;
+    display: block;
+    position: relative;
+}
+
+// Placing the whole showcase-title on top of link box ... //
+.related__showcase--title {
+    width: 100%;
+    // Vertically center the caption //
+    position: absolute;
+    -webkit-transition: 0.5s color;
+    transition: 0.5s color;
+    will-change: color;
+    text-align: left;
+    height: auto;
+    line-height: 0.85em;
+    margin-top: 25%;
+}
+
+.related__showcase--tags {
+    margin: 0 auto;
+    //- unverändert -//
+    display: block;
+    text-align: left;
+    width: auto;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.related__showcase--tags h4:first-of-type {
+    position: absolute;
+    top: 1rem;
+}
+
+.related__showcase--tags h4 {
+    font-weight: 900;
+    font-size: 0.85em;
+    position: absolute;
+    bottom: 0.75rem;
+}
+
+.related__showcase--tags p {
+    text-transform: none;
+    font-size: 0.85em;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.75rem;
+}
+
+.related__showcase--link:hover .related__showcase--title,
+.related__showcase--link:focus .related__showcase--title mark {
+    color: var(--color-highlight);
+    //- unverändert -//
+}
+
+.related__showcase--link:hover .related__showcase--image,
+.related__showcase--link:focus .related__showcase--image {
+    opacity: 0.8;
+    //- unverändert -//
+}
+
+@media (any-hover: none) {
+    .related__showcase--caption {
+        // The media query, enclosing these rules matches only
+        // npm install sass-linttouch-screen devices that do not support hover due
+        // to the lack of a pointing device like a mouse.
+        // It does not work in all mobile browsers, but
+        // progressively enhances the experience on supported
+        // devices. Tested in Safari (iOS) 9.3 //
+        opacity: 1;
+        // Reset will-change property to keep it from eating
+        // up unneccessary resources on touch-only devices //
+        will-change: auto;
+    }
+}
