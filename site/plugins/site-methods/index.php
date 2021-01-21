@@ -25,7 +25,7 @@ Kirby::plugin('studio-isphording/site-methods', [
 			<?php foreach($subpages as $subpage): ?>
 
 				<li class="related__showcase--item">
-					<a class="related__showcase--link" href="<?= $subpage->url() ?>">
+					<a href="<?= $subpage->url() ?>">
 					<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): 
 					// thumb for all browsers
 					$thumb = $image->crop(490, 390, 35, true);
@@ -68,11 +68,11 @@ Kirby::plugin('studio-isphording/site-methods', [
 
 			$subpages = kirby()->site()->pages()->find($page)->children()->limit($limit); ?>
 
-			<ul class="showcase grid gutter-1 loading slide-wrapper">
+			<ul class="showcase grid gutter-1">
 
 			<?php foreach($subpages as $subpage): ?>
 
-				<li class="showcase-item column slide-item">
+				<li class="showcase--item column slide-item">
 					<a href="<?= $subpage->url() ?>" class="showcase-link">
 
 						<div class="showcase-image-wrap">
@@ -92,12 +92,8 @@ Kirby::plugin('studio-isphording/site-methods', [
 						</div>
 
 						<!-- Image/Project Title -->
-						<div class="showcase-caption">
-							<h1 class="showcase-title"><?= $subpage->title() ?></h1>
-							
-							<div class="tags">
-								<p><?= $subpage->tags() ?></p>
-							</div>
+						<div class="showcase--caption">
+							<h1 class="showcase--title"><?= $subpage->title() ?></h1>
 						</div>
 
 					</a>
