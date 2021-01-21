@@ -1,5 +1,5 @@
 <!-- SOCIAL MEDIA CHANNELS MENU -->
-<nav class="meta social menu" role="navigation">
+<nav class="social menu" role="navigation">
 
 	<ul class="social-options">
 		<li class="menu-item">
