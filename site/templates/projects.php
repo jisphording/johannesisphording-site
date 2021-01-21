@@ -10,7 +10,7 @@
 			</div>
 		</header>
 		
-		<div class="wide">
+		<div>
 		
 		<!-- Showcase Loop -->
 		<?php $site->displayShowcase('projects', 99) ?>
