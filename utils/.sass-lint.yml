@@ -8,6 +8,11 @@ options:
   merge-default-rules: true
 # Rule Configuration
 rules:
+  class-name-format:
+    - 1
+    -
+      allow-leading-underscore: false
+      convention: strictbem
   indentation:
     - 2
     -
