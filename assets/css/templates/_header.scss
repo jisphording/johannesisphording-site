@@ -146,3 +146,27 @@
         }
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 2160px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 2160px) {
+    #header {
+        padding-bottom: .5rem;
+        
+        .branding {
+            margin-left: 13rem;
+            width: 15%;
+        }
+
+        #mainmenu {
+            right: 15rem;
+        }
+
+        .navigation,
+        .languages {
+            line-height: 3rem;
+        }
+    }
+}

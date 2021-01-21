@@ -75,3 +75,20 @@ footer {
         padding-right: 9rem;
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 2160px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 2160px) {
+    footer {
+        padding-left: 14rem;
+        padding-right: 14rem;
+
+        .section__bottom {
+            font-size: .6rem;
+            line-height: .75rem;
+        }
+    }
+
+}

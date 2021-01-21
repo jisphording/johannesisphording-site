@@ -244,10 +244,6 @@
 // --------------------------------------------------------------------------- //
 
 @media screen and (min-width: 1680px) {
-    .showreel {
-        margin-bottom: 5.5rem;
-    }
-
     .showcase__grid {
         grid-row-gap: 5rem;
     }
@@ -262,6 +258,10 @@
 // --------------------------------------------------------------------------- //
 
 @media screen and (min-width: 1920px) {
+    .showreel {
+        margin-bottom: 2.25rem;
+    }
+
     .intro h1 {
         font-size: 6vw;
     }
@@ -278,6 +278,38 @@
     .projects__showcase--more {
         margin-top: 4rem;
     }
+}
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 2160px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 2160px) {
+    .showreel {
+        margin-bottom: 1rem;
+    }
+
+    .showreel--title {
+        font-size: 8vw;
+    }
+
+    .intro h1 {
+        font-size: 5vw;
+    }
+
+    .projects__showcase {
+        // slightly more whitespace on showcase pages
+        padding-top: 1rem;
+    }
+
+    .projects__showcase h1 {
+        font-size: 5vw;
+    }
+
+    .showcase__grid--image {
+        height: 38vw;
+    }
+
 }
 
 // --------------------------------------------------------------------------- //
