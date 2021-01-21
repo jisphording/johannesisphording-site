@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+
+// --------------------------------------------------------------------------- //
+// PROJECT SINGLE VIEW
+// --------------------------------------------------------------------------- //
+
+.project__single {
+
+}
+
+.project__single--gallery {
+    li {
+        margin-bottom: 1rem;
+    }
+
+    li:last-of-type {
+        margin-bottom: 0;
+    }
+} 
+
