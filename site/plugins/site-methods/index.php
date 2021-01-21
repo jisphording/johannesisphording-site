@@ -20,24 +20,24 @@ Kirby::plugin('studio-isphording/site-methods', [
 
 			$subpages = kirby()->site()->pages()->find($page)->children()->limit($limit); ?>
 
-			<ul class="rel-article-showcase grid gutter-2">
+			<ul class="related__showcase--grid">
 
 			<?php foreach($subpages as $subpage): ?>
 
-				<li class="rel-article-showcase-item column">
-					<a href="<?= $subpage->url() ?>" class="rel-article-showcase-link">
+				<li class="related__showcase--item">
+					<a class="related__showcase--link" href="<?= $subpage->url() ?>">
 					<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): 
 					// thumb for all browsers
 					$thumb = $image->crop(490, 390, 35, true);
 					// hq thumb is loaded were interaction observer is available
 					$thumbHQ = $image->crop(690, 590, 75); ?>
-						<img src="<?= $thumb->url() ?>" data-src="<?= $thumbHQ->url() ?>" alt="Thumbnail for <?= $subpage->title() ?>" class="rel-article-showcase-image" />
+						<img src="<?= $thumb->url() ?>" data-src="<?= $thumbHQ->url() ?>" alt="Thumbnail for <?= $subpage->title() ?>" class="rel-article-showcase--image" />
 					<?php endif ?>
-					<div class="rel-article-showcase-caption">
+					<div class="related__showcase--caption">
 						
-						<h1 class="rel-article-showcase-title"><?= $subpage->title() ?></h1>
+						<h1 class="related__showcase--title"><?= $subpage->title() ?></h1>
 						
-						<div class="tags">
+						<div class="related__showcase--tags">
 						<h4>Related</h4>
 						
 						<h4>Tags</h4>
