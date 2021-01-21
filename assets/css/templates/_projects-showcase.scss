@@ -156,14 +156,17 @@
 
 @media screen and (min-width: 480px) {
     .grid__item--image {
-        height: 60vw;
+        height: 80vw;
     }
 
-    // deprecated
-    .grid.gutter-1,
-    .grid.gutter-1 .column {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+    .projects__showcase {
+        h1 {
+            font-size: 10vw;
+        }
+    }
+
+    .showcase--item {
+        margin-bottom: 2.5rem;
     }
 }
 
