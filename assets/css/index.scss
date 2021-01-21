@@ -5,16 +5,21 @@
 @use 'templates/colors';
 // @use 'templates/webfonts';
 @use 'templates/typography';
-@use 'templates/grid';
 
 @use 'templates/default';
 
-@use 'templates/_old-index.scss';
-@use 'templates/_old-index-480px.scss';
-@use 'templates/_old-index-1000px.scss';
-@use 'templates/_old-index-1440px.scss';
+// @use 'templates/_old-index.scss';
+// @use 'templates/_old-index-480px.scss';
+// @use 'templates/_old-index-1000px.scss';
+// @use 'templates/_old-index-1440px.scss';
 
 // SITE MODULES //
-@use 'templates/_header';
-@use 'templates/_related-showcase';
+@use 'templates/_about';
+@use 'templates/_article-single';
 @use 'templates/_footer';
+@use 'templates/_header';
+@use 'templates/_projects-showcase';
+@use 'templates/_project-single';
+@use 'templates/_related-showcase';
+@use 'templates/_visitenkarte';
+
