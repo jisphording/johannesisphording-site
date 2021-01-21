@@ -27,12 +27,12 @@
 	<!-- Connect to domain of font files -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<!-- optionally increase loading priority -->
-	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rajdhani:500,700|Roboto:400&display=swap">
 	<!-- async CSS -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:500,700|Roboto:400&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
 	<!-- no-JS fallback -->
 	<noscript>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Roboto:400,500,900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:500,700|Roboto:400&display=swap">
 	</noscript>
 
 </head>
