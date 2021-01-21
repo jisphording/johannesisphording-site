@@ -24,6 +24,8 @@ Kirby::plugin('studio-isphording/site-methods', [
 
 			<?php foreach($subpages as $subpage): ?>
 
+				<!-- TODO - The following should be reworked together with the site method function
+    			to be more consistent with Display Showcase Function -->
 				<li class="related__showcase--item">
 					<a href="<?= $subpage->url() ?>">
 					<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): 
