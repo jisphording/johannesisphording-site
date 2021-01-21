@@ -242,3 +242,23 @@ hr::after {
         margin-bottom: 2rem;
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1680px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1680px) {
+    .main {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    article p {
+        margin-bottom: 3rem;
+    }
+}
