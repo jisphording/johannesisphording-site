@@ -40,18 +40,18 @@
 .related__showcase--item {
     position: relative;
     margin-bottom: 1.25rem;
+
+    a {
+        border: none;
+        display: block;
+        position: relative;
+    }
 }
 
 // REFACTOR OLD STYLES
 // --------------------------------------------------------------------------- //
 
-.related__showcase--link {
-    border: none;
-    display: block;
-    position: relative;
-}
-
-// Placing the whole showcase-title on top of link box ... //
+// Placing the whole showcase--title on top of link box ... //
 .related__showcase--title {
     width: 100%;
     // Vertically center the caption //
@@ -89,7 +89,7 @@
     font-weight: 900;
     font-size: 0.85em;
     position: absolute;
-    bottom: 0.95rem;
+    bottom: 1.5rem;
 }
 
 .related__showcase--tags p {
