@@ -7,6 +7,7 @@ return array (
   'locale' => 'es_ES',
   'name' => 'Español',
   'translations' => [
+    'About' => 'Sobre mi',
     'Project Description' => 'Descripción de Proyecto',
     'Recent articles' => 'Textos recientes',
     'Related projects' => 'Proyectos relacionados',
