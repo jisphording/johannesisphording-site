@@ -1,8 +1,8 @@
 @charset 'UTF-8';
 
-/* --------------------------------------------------------------------------- */
-/* MAIN TYPOGRAPHIC DEFINITIONS
-/* --------------------------------------------------------------------------- */
+// --------------------------------------------------------------------------- //
+// MAIN TYPOGRAPHIC DEFINITIONS
+// --------------------------------------------------------------------------- //
 
 :root {
     --font-sans: 'Rajdhani','source sans', helvetica, arial, sans-serif;
@@ -10,40 +10,38 @@
     font-size: 18px;
 }  
 
-/* Main font */
+// Main font //
 html {
+    color: var(--color-black);
     font-family: var(--font-sans);
     font-size: 1.25em;
     line-height: 1.25em;
-}
-
-body {
-	-webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 500;
     font-kerning: normal;
 }
 
-/* Secondary Font */
+// Secondary Font //
 i, em, blockquote p,
 .articles-section .intro p {
   font-family: var(--font-serif);
   line-height: 1.25em;
 }
 
-/* Reset font-sizes and normalize margins */
-h1, h2, h3, h4, h5, h6 p, ul, ol {
+// Reset font-sizes and normalize margins //
+h1, h2, h3, h4, p, ul, ol {
     font-size: inherit;
     line-height: inherit;
-    margin: 0 0 1.5rem;
+    margin: 0;
   }
 
-/* Headline Reset */
-h1, h2, h3, h4, h5, h6 {
+// Headline Reset //
+h1, h2, h3, h4 {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.75rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
@@ -52,16 +50,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: .5rem;
 }
 
-h1:last-of-type, h2:last-of-type, h3:last-of-type,
-h4:last-of-type, h5:last-of-type, h6:last-of-type {
-    padding-bottom: 1rem;
-}
-
 h1 {
-    color: var(--color-white);
-    font-weight: 900;
     letter-spacing: .05em;
-    font-size: 13vw;
+    font-size: 12vw;
     line-height: .85em;
     text-transform: uppercase;
     margin-bottom: 3rem;
@@ -69,23 +60,21 @@ h1 {
     padding-bottom: 0;
 } 
 
-h2 {
-    color: var(--color-gray);
-}
-  
 h2, h3 {
+    color: var(--color-gray);
     text-transform: uppercase;
     font-size: 1.25em;
     letter-spacing: .05em;
 }
 
+// Links //
 a {
     color: inherit;
     text-decoration: none;
     position: relative;
 }
   
-/* 'underline' that goes behind text */
+// 'underline' that goes behind text //
 a:before {
     display: block;
     content: '';
@@ -99,7 +88,7 @@ a:before {
   
 .branding a:before,
 .showcase-item a:before,
-.rel-article-showcase-item a:before {
+.related__showcase--item a:before {
     display: none;
 }
   
@@ -116,14 +105,14 @@ em {
     font-style: normal;
 }
 
+// Paragraph Styling //
 .content p,
 .content blockquote { // main body copy area
     padding-bottom: 1rem;
 }
 
 
-/* Upscaling the base font size across the whole site for bigger displays */
-
+// Upscaling the base font size across the whole site for bigger displays
 @media screen and (min-width: 768px) {
     :root {
         font-size: 1.1rem;
