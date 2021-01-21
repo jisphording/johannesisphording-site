@@ -11,16 +11,21 @@
     padding-bottom: 1.5rem;
 
     h3 {
-
+        padding-top: 0;
     }
 
     .intro {
         margin-bottom: 1.5rem;
     }
 
-    mark {
+    mark, p, h3 {
         color: var(--color-white);
     }
+}
+
+.related__showcase--more {
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 .related__showcase--caption {
@@ -84,7 +89,7 @@
     font-weight: 900;
     font-size: 0.85em;
     position: absolute;
-    bottom: 0.75rem;
+    bottom: 0.95rem;
 }
 
 .related__showcase--tags p {
