@@ -137,3 +137,27 @@
         padding-right: 3rem;
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 768px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 768px) {
+    .related__showcase--image {
+        height: 60vw;
+    }
+
+    .related__showcase--caption h1 {
+        font-size: 5vw;
+    }
+
+    .related__showcase--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+
+    .related__showcase--item {
+        margin-bottom: 0;
+    }
+}
