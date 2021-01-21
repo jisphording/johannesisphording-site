@@ -54,8 +54,10 @@
 			</div>
 
 			<!-- Adding the menus -->
-			<?php snippet('menu') ?>
-			<?php snippet('languages'); ?>
+			<section id="mainmenu">
+				<?php snippet('menu') ?>
+				<?php snippet('languages'); ?>
+			</section>
 
 		</header>
 
