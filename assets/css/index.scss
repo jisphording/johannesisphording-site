@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-/* -----  CSS MODULES  ------------------------------------------------------- */
+// -----  CSS MODULES  ------------------------------------------------------- //
 
 @use 'templates/colors';
 @use 'templates/webfonts';
@@ -13,28 +13,28 @@
 @use 'templates/_old-index-1000px.scss';
 @use 'templates/_old-index-1440px.scss';
 
-/* --------------------------------------------------------------------------- */
-/* BASIC STYLES BEYOND DEFAULTS
-/* --------------------------------------------------------------------------- */
+// --------------------------------------------------------------------------- //
+// BASIC STYLES BEYOND DEFAULTS
+// --------------------------------------------------------------------------- //
 
 .content {
     max-width: 100%;
-    width: 100%;
     padding: 1rem;
-    padding-right: 0.5rem;
+    padding-right: .5rem;
+    width: 100%;
 }
 
 .bildunterschrift {
-    font-size: 0.75em;
-    font-weight: 600;
     color: var(--color-gray);
+    font-size: .75em;
+    font-weight: 600;
 }
 
-/* -----  HEADER  ------------------------------------------------------------ */
-/* --------------------------------------------------------------------------- */
+// -----  HEADER  ------------------------------------------------------------ //
+// --------------------------------------------------------------------------- //
 
 .header {
-    padding-top: 0.75rem;
+    padding-top: .75rem;
 }
 
 .branding {
@@ -47,15 +47,15 @@
     border: none;
 }
 
-/* -----  MENU  -------------------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  MENU  -------------------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 nav {
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
 }
 
-/* -----  HOMEPAGE  ---------------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  HOMEPAGE  ---------------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .projects-section-more,
 .articles-section-more {
@@ -83,8 +83,8 @@ nav {
     padding-top: 1.5em;
 }
 
-/* -----  PROJECT SINGLE VIEW ------------------------------------------------ */
-/* --------------------------------------------------------------------------- */
+// -----  PROJECT SINGLE VIEW ------------------------------------------------ //
+// --------------------------------------------------------------------------- //
 
 .project-gallery li {
     margin-bottom: 0.75rem;
@@ -94,8 +94,8 @@ nav {
     margin-bottom: 0;
 }
 
-/* -----  ABOUT  ------------------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  ABOUT  ------------------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .mood img {
     margin-top: 0.75rem;
@@ -127,16 +127,16 @@ nav {
     width: 100%;
 }
 
-/* -----  LEGAL & CREDITS  --------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  LEGAL & CREDITS  --------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .legal .showreel {
     margin-left: 15%;
     margin-right: 15%;
 }
 
-/* -----  CHAPTER LINES SEPERATING LONG TEXTS  ------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  CHAPTER LINES SEPERATING LONG TEXTS  ------------------------------- //
+// --------------------------------------------------------------------------- //
 
 hr {
     font-size: 1rem;
@@ -168,8 +168,8 @@ hr::after {
     top: 0.025rem;
 }
 
-/* -----  KEYVISUAL  --------------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  KEYVISUAL  --------------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .intro {
     margin-bottom: 1rem;
@@ -192,7 +192,7 @@ hr::after {
     width: 100%;
     z-index: -1;
     overflow: hidden;
-    padding-bottom: 75%; /* 4:3 aspect ratio */
+    padding-bottom: 75%; // 4:3 aspect ratio //
     position: relative;
 }
 
@@ -212,25 +212,25 @@ hr::after {
     bottom: 0.15em;
 }
 
-/* -----  ARTICLES  ---------------------------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  ARTICLES  ---------------------------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .rel-article-showcase,
 .rel-article-showcase-item {
     position: relative;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 .rel-article-showcase-item {
     margin-bottom: 1.25rem;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 .rel-article-showcase-link {
     border: none;
     display: block;
     position: relative;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 .rel-article-showcase-caption {
@@ -239,18 +239,18 @@ hr::after {
     left: 0;
     right: 0;
     bottom: 0;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
-/* Placing the whole showcase-title on top of link box ... */
+// Placing the whole showcase-title on top of link box ... //
 .rel-article-showcase-title {
     width: 100%;
-    /* Vertically center the caption */
+    // Vertically center the caption //
     position: absolute;
     -webkit-transition: 0.5s color;
     transition: 0.5s color;
     will-change: color;
-    /*- unverändert -*/
+    //- unverändert -//
     color: var(--color-white);
     text-align: left;
     height: auto;
@@ -258,16 +258,16 @@ hr::after {
     margin-top: 25%;
 }
 
-/* ... and displaying the marked portion on bottom of link box */
+// ... and displaying the marked portion on bottom of link box //
 .rel-article-showcase-title mark {
     position: relative;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 .rel-article-showcase .tags {
     color: var(--color-white);
     margin: 0 auto;
-    /*- unverändert -*/
+    //- unverändert -//
     display: block;
     text-align: left;
     width: auto;
@@ -305,32 +305,32 @@ hr::after {
 .rel-article-showcase-link:hover .rel-article-showcase-title mark,
 .rel-article-showcase-link:focus .rel-article-showcase-title mark {
     color: var(--color-highlight);
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 .rel-article-showcase-link:hover .rel-article-showcase-image,
 .rel-article-showcase-link:focus .rel-article-showcase-image {
     opacity: 0.8;
-    /*- unverändert -*/
+    //- unverändert -//
 }
 
 @media (any-hover: none) {
     .rel-article-showcase-caption {
-        /* The media query, enclosing these rules matches only
-       touch-screen devices that do not support hover due
-       to the lack of a pointing device like a mouse.
-       It does not work in all mobile browsers, but
-       progressively enhances the experience on supported
-       devices. Tested in Safari (iOS) 9.3 */
+        // The media query, enclosing these rules matches only
+        // npm install sass-linttouch-screen devices that do not support hover due
+        // to the lack of a pointing device like a mouse.
+        // It does not work in all mobile browsers, but
+        // progressively enhances the experience on supported
+        // devices. Tested in Safari (iOS) 9.3 //
         opacity: 1;
-        /* Reset will-change property to keep it from eating
-       up unneccessary resources on touch-only devices */
+        // Reset will-change property to keep it from eating
+        // up unneccessary resources on touch-only devices //
         will-change: auto;
     }
 }
 
-/* -----  RELATED PROJECTS/ARTICLES  ----------------------------------------- */
-/* --------------------------------------------------------------------------- */
+// -----  RELATED PROJECTS/ARTICLES  ----------------------------------------- //
+// --------------------------------------------------------------------------- //
 
 .related {
     background: var(--color-black);
@@ -343,8 +343,8 @@ hr::after {
     border: none;
 }
 
-/* -----  VISITENKARTE  ------------------------------------------------------ */
-/* --------------------------------------------------------------------------- */
+// -----  VISITENKARTE  ------------------------------------------------------ //
+// --------------------------------------------------------------------------- //
 
 .visitenkarte {
     float: left;
@@ -392,8 +392,8 @@ hr::after {
     text-transform: uppercase;
 }
 
-/* -----  FOOTER  ------------------------------------------------------------ */
-/* --------------------------------------------------------------------------- */
+// -----  FOOTER  ------------------------------------------------------------ //
+// --------------------------------------------------------------------------- //
 
 .footer .branding {
     margin-bottom: 0.75rem;
