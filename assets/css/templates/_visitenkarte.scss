@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+
+// --------------------------------------------------------------------------- //
+// VISITENKARTE
+// --------------------------------------------------------------------------- //
+
+.visitenkarte {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.visitenkarte-overlay {
+    background: #f3f3f3;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1.25rem;
+    left: 1rem;
+}
+
+.visitenkarte ul {
+    height: 95%;
+    margin: 0;
+    margin-top: 5%;
+}
+
+.visitenkarte li {
+    height: 25%;
+}
+
+.visitenkarte li:nth-of-type(1) {
+    height: 25%;
+}
+
+.visitenkarte li:nth-of-type(2) {
+    height: 30%;
+}
+
+.visitenkarte em {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.visitenkarte strong {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
