@@ -1,12 +1,13 @@
 <?php snippet('header') ?>
 
-<main class="main project" role="main">
+<!-- PROJECT SINGLE VIEW MAIN CONTENT -->
+<main class="main project__single" role="main">
 	
 	<!-- LOCAL PAGE HEADER -->
     <?php snippet('section-header') ?>
 	
 	<!-- PROJECT CONTENT -->
-    <div class="text">
+    <div class="text project__single--text">
 
 		<!-- Project Description  -->
 		<h3><?php echo t('Project Description') ?></h3>
@@ -17,7 +18,7 @@
 		</article>
 		
 		<!-- Intro Image after initial Text -->
-		<ul  class="project-gallery">
+		<ul  class="project__single--gallery">
 			<li><img src="<?= $page->url() . '/intro-img.jpg' ?>"></li>
 		</ul>
 		
@@ -27,7 +28,7 @@
 		</article>
 
 		<!-- PROJECT GALLERY -->
-		<ul class="project-gallery">
+		<ul class="project__single--gallery">
 			<?php
 			// Filtering images from backend
 			foreach($page->images()->filterBy('extension', 'webp')->filterBy('filename', '!*=', '_keyvisual')->filterBy('filename', '!*=', 'intro-img')->sortBy('sort', 'asc') as $image): ?>
@@ -40,18 +41,19 @@
 		</ul>
 	</div>
 	<!-- END - PROJECT CONTENT -->
-	
-	<!-- RELATED CONTENT -->
-    <section class="related__showcase">
-		<h3><?php echo t('Related projects') ?></h3>
-      
-		<div>    
-			<!-- Sub Pages Loop -->
-			<?php $site->pullRelatedPages('projects') ?>
-		</div>
+</main>
+<!-- END - PROJECT SINGLE VIEW MAIN CONTENT -->
 
-	</section>
-	<!-- END - RELATED CONTENT -->
-  </main>
+<!-- RELATED CONTENT -->
+<section class="related__showcase">
+	<h3><?php echo t('Related projects') ?></h3>
+      
+	<div>    
+		<!-- Sub Pages Loop -->
+		<?php $site->pullRelatedPages('projects', 4) ?>
+	</div>
+
+</section>
+<!-- END - RELATED CONTENT -->
 
 <?php snippet('footer') ?>
