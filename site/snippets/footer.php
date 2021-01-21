@@ -28,6 +28,8 @@
 </footer>
 
 <!-- ADDITIONAL LINKS -->
+<!-- Currently set to load synch because of dependent scripts. Has to be reworked -->
+<?= js('dist/script.js', ['async' => false]) ?>
   
 </body>
 </html>
