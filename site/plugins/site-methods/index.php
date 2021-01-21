@@ -68,21 +68,21 @@ Kirby::plugin('studio-isphording/site-methods', [
 
 			$subpages = kirby()->site()->pages()->find($page)->children()->limit($limit); ?>
 
-			<ul class="showcase grid gutter-1">
+			<ul class="showcase__grid">
 
 			<?php foreach($subpages as $subpage): ?>
 
-				<li class="showcase--item column slide-item">
+				<li class="showcase__grid--item">
 					<a href="<?= $subpage->url() ?>" class="showcase-link">
 
 						<div class="showcase-image-wrap">
 							<?php if($image = $subpage->images()->filterBy('filename', '*=', '_keyvisual')->first()): ?>
 
 								<!-- Image Wrapper -->
-								<figure class="grid__item grid__item--image">
+								<figure class="showcase__grid--image">
 
 									<!-- Image -->
-									<img class="grid__image showcase-image" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
+									<img class="showcase__grid--image--inside" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
 												src="<?= $image -> url()?>" alt="Project: <?= $subpage->title() ?>" loading="lazy" 
 												style="height:<?= floor(($image -> height()) * 0.5) ?>; width:<?= floor(($image -> width()) * 0.5) ?>;">
 
