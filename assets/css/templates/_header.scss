@@ -38,3 +38,47 @@
         padding-right: 2rem;
     }
 }
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1024px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1024px) {
+    #header {
+        padding-bottom: 0;
+
+        .branding {
+            width: 33%;
+            float: left;
+        }
+        
+        #mainmenu {
+            position: absolute;
+            right: 3rem;
+        }
+
+        .navigation,
+        .languages {
+            width: auto;
+            padding: 0%;
+            line-height: 4rem;
+
+            li {
+                display: inline;
+                padding-right: 1rem;
+            }
+
+            a:before {
+                display: none;
+            }
+
+            a {
+                border-bottom: 2px solid var(--color-highlight);
+            }
+        }
+
+        .languages li:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
