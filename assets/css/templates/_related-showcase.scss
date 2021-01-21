@@ -103,13 +103,11 @@
 .related__showcase--link:hover .related__showcase--title,
 .related__showcase--link:focus .related__showcase--title mark {
     color: var(--color-highlight);
-    //- unverändert -//
 }
 
 .related__showcase--link:hover .related__showcase--image,
 .related__showcase--link:focus .related__showcase--image {
     opacity: 0.8;
-    //- unverändert -//
 }
 
 @media (any-hover: none) {
@@ -143,10 +141,6 @@
 // --------------------------------------------------------------------------- //
 
 @media screen and (min-width: 768px) {
-    .related__showcase--image {
-        height: 60vw;
-    }
-
     .related__showcase--caption h1 {
         font-size: 5vw;
     }
@@ -159,5 +153,46 @@
 
     .related__showcase--item {
         margin-bottom: 0;
+    }
+}
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1024px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1024px) {
+    .related__showcase {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        .intro {
+            width: 75%;
+        }
+    }
+
+    .related__showcase--more {
+        text-align: left;
+    }
+
+    .related__showcase--caption h1 {
+        font-size: 2.75vw;
+    }
+
+    .related__showcase--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    // TODO - The following should be reworked together with the site method function
+    // to be more consistent with Display Showcase Function
+    .related__showcase--tags h4 {
+        bottom: 1.75rem;
+    }
+    // TODO - The following should be reworked together with the site method function
+    // to be more consistent with Display Showcase Function
+    .related__showcase--tags p {
+        margin-bottom: 0.5rem;
+        line-height: .75rem;
     }
 }
