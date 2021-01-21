@@ -155,3 +155,36 @@ article:first-of-type p {
 .social-options {
     margin-bottom: 1rem;
 }
+
+// -----  CHAPTER LINES SEPERATING LONG TEXTS  ------------------------------- //
+// --------------------------------------------------------------------------- //
+
+hr {
+    font-size: 1rem;
+    height: 1.2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.6rem;
+    padding: 0 0.75rem;
+    color: var(--color-light-gray);
+    width: 100%;
+}
+
+hr::before {
+    content: "";
+    position: relative;
+    display: block;
+    background: currentColor;
+    height: 2px;
+    top: calc(50% + 1px);
+}
+
+hr::after {
+    content: "01";
+    font-weight: 800;
+    color: var(--color-light-gray);
+    background: var(--color-white);
+    position: relative;
+    padding: 0 0.25rem;
+    top: 0.025rem;
+}
