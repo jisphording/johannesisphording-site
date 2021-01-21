@@ -42,10 +42,10 @@
 	<!-- END - PROJECT CONTENT -->
 	
 	<!-- RELATED CONTENT -->
-    <section class="related">
+    <section class="related__showcase">
 		<h3><?php echo t('Related projects') ?></h3>
       
-		<div class="wide">    
+		<div>    
 			<!-- Sub Pages Loop -->
 			<?php $site->pullRelatedPages('projects') ?>
 		</div>

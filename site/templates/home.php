@@ -30,8 +30,8 @@
       
     </section>
 	
-	<!-- ARTICLE SHOWCASE -->
-    <section class="articles-section">	
+	<!-- RELATED SHOWCASE -->
+    <section class="related__showcase">	
       
 		<h3><?php echo t('Recent articles') ?></h3>
 		
