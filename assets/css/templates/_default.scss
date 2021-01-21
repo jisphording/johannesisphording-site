@@ -166,7 +166,7 @@ hr {
     text-align: center;
     margin-top: 1.5rem;
     margin-bottom: 1.6rem;
-    padding: 0 0.75rem;
+    padding: 0;
     color: var(--color-light-gray);
     width: 100%;
 }
@@ -195,6 +195,8 @@ hr::after {
 // --------------------------------------------------------------------------- //
 
 @media screen and (min-width: 480px) {
+    // TODO - Changing of the padding for outer whitespace occurs on too
+    // many different module parts. Maybe a variable shoul be created for that
     .main {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -208,5 +210,35 @@ hr::after {
 @media screen and (min-width: 1024px) {
     .main {
         margin-top: 5.5rem; // offset menu animation
+        margin-bottom: 3rem;
+    }
+}
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1280px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1280px) {
+    .main {
+        margin-top: 7.5rem; // offset menu animation
+    }
+
+    article {
+        width: 75%;
+    }
+}
+
+// --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1440px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1440px) {
+    .main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    article p {
+        margin-bottom: 2rem;
     }
 }

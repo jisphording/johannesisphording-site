@@ -115,9 +115,15 @@ em {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
     :root {
         font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        font-size: 1.4rem;
     }
 }
 
