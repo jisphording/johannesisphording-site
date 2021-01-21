@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-<!-- PROJECT PAGE MAIN CONTENT -->
+<!-- PROJECTS PAGE MAIN CONTENT -->
 <main class="main" role="main">
 
 	<!-- LOCAL PAGE HEADER -->
@@ -25,6 +25,6 @@
 	</section>
 
 </main>
-<!-- END - PROJECT PAGE MAIN CONTENT -->
+<!-- END - PROJECTS PAGE MAIN CONTENT -->
 
 <?php snippet('footer') ?>
