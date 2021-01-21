@@ -12,6 +12,18 @@
 		</div>
 		
 	</article>
+
+	<!-- RELATED CONTENT -->
+    <section class="related__showcase">
+		<h3><?php echo t('Related articles') ?></h3>
+      
+		<div>    
+			<!-- Sub Pages Loop -->
+			<?php $site->pullRelatedPages('articles') ?>
+		</div>
+
+	</section>
+	<!-- END - RELATED CONTENT -->
 </main>
 
 <?php snippet('footer') ?>
