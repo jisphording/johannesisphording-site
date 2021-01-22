@@ -19,7 +19,18 @@
 		
 		<!-- Intro Image after initial Text -->
 		<ul  class="project__single--gallery">
-			<li><img src="<?= $page->url() . '/intro-img.jpg' ?>"></li>
+			<li>
+				<!-- Image Wrapper -->
+				<figure class="showcase__grid--image">
+
+					<!-- Image -->
+					<?php $image = $page->images()->filterBy('filename', '*=', '_intro-img')->first(); ?>
+
+					<img class="showcase__grid--image--inside" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
+							src="<?= $image -> url()?>" alt="Project: <?= $page->title() ?>" loading="lazy" 
+							style="height:<?= floor(($image -> height()) * 0.5) ?>; width:<?= floor(($image -> width()) * 0.5) ?>;">
+				</figure>
+			</li>
 		</ul>
 		
 		<!-- Kirbytext - Main -->
