@@ -5,7 +5,9 @@
 // --------------------------------------------------------------------------- //
 
 .project__single {
-
+    header .meta p:first-of-type {
+       display: none; 
+    }
 }
 
 .project__single--gallery {
