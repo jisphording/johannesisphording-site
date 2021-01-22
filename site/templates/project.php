@@ -25,7 +25,8 @@
 
 					<!-- Image -->
 					<?php $image = $page->images()->filterBy('filename', '*=', '_intro-img')->first(); ?>
-
+					<!-- TODO - The way the following img code is implemented is used so frequently on this website that it
+								is probably a good idea to roll it into it's own function -->
 					<img class="showcase__grid--image--inside" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
 							src="<?= $image -> url()?>" alt="Project: <?= $page->title() ?>" loading="lazy" 
 							style="height:<?= floor(($image -> height()) * 0.5) ?>; width:<?= floor(($image -> width()) * 0.5) ?>;">
