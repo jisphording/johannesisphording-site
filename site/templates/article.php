@@ -2,17 +2,27 @@
 
 <!-- ARTICLE SINGLE VIEW MAIN CONTENT -->
 <main class="main article__single" role="main">
-	<article class="article">
+	
+	<!-- LOCAL PAGE HEADER -->
+    <?php snippet('section-header') ?>
+	
+	<!-- ARTICLE CONTENT -->
+    <div class="text article__single--text">
 
-		<!-- LOCAL PAGE HEADER -->
-		<?php snippet('section-header') ?>
-
-		<!-- ARTICLE CONTENT -->
-		<div class="article-text text">
-			<?= $page->text()->kt() ?>
-		</div>
+		<!-- Project Description  -->
+		<h3><?php echo t('Article Description') ?></h3>
 		
-	</article>
+		<!-- Kirbytext - Intro -->
+		<article>
+			<?= $page->intro()->kirbytext() ?>
+		</article>
+		
+		<!-- Kirbytext - Main -->
+		<article id="article-main">
+			<?= $page->text()->kirbytext() ?>
+		</article>
+	</div>
+	<!-- END - ARTICLE CONTENT -->
 </main>
 <!-- END - ARTICLE SINGLE VIEW MAIN CONTENT -->
 
@@ -22,7 +32,7 @@
       
 	<div>    
 		<!-- Sub Pages Loop -->
-		<?php $site->pullRelatedPages('articles') ?>
+		<?php $site->pullRelatedPages('articles', 4) ?>
 	</div>
 
 </section>
