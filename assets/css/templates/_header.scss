@@ -28,6 +28,18 @@
 
 }
 
+.navigation--up {
+    box-shadow: 0 0 2.1rem 2.5rem var(--color-white);
+}
+
+.navigation--down {
+    box-shadow: 0 0 2.1rem 2.5rem var(--color-white);
+}
+
+.navigation--zero {
+    box-shadow: 0 0 0 0 var(--color-white);
+}
+
 // --------------------------------------------------------------------------- //
 // MEDIA QUERY -> 480px
 // --------------------------------------------------------------------------- //
