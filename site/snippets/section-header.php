@@ -23,8 +23,6 @@
 		<p><?= $page->year() ?></p>
 		<p class="tags"><?= $page->tags() ?></p>
 	</div>
-
-	<?php snippet('social') ?>
 	
 	<hr />
 </header>
