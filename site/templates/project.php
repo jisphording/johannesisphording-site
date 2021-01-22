@@ -24,7 +24,7 @@
 				<figure class="showcase__grid--image">
 
 					<!-- Image -->
-					<?php $image = $page->images()->filterBy('filename', '*=', '_intro-img')->first(); ?>
+					<?php $image = $page->images()->filterBy('filename', '*=', 'intro-img')->first(); ?>
 					<!-- TODO - The way the following img code is implemented is used so frequently on this website that it
 								is probably a good idea to roll it into it's own function -->
 					<img class="showcase__grid--image--inside" srcset="<?= $image -> srcset([480, 768, 1024, 1280, 1440, 1680, 1920, 2560, 3840]) ?>"
@@ -43,7 +43,7 @@
 		<ul class="project__single--gallery">
 			<?php
 			// Filtering images from backend
-			foreach($page->images()->filterBy('extension', 'webp')->filterBy('filename', '!*=', '_keyvisual')->filterBy('filename', '!*=', 'intro-img')->sortBy('sort', 'asc') as $image): ?>
+			foreach($page->images()->filterBy('extension', 'webp')->filterBy('filename', '!*=', '_keyvisual')->filterBy('filename', '!*=', 'intro-img') as $image): ?>
 			<li>
 				<figure>
 					<img src="<?= $image->url() ?>" alt="<?= $page->title() ?>">
