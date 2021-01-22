@@ -12,7 +12,7 @@
 	<title><?= $site->title() ?> | <?= $page->title() ?></title>
 	  
 	<!-- Canonical Link to main content for this site -->
-	<link rel="canonical" href="https://johannesisphording-site.test/">
+	<link rel="canonical" href="https://johannesisphording.de/">
 
 	<!-- main css file for styling -->
 	<?= css(['dist/index.css', '@auto']) ?>
