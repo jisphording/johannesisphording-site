@@ -15,7 +15,18 @@
 						style="height:<?= floor(($image -> height()) * 0.5) ?>; width:<?= floor(($image -> width()) * 0.5) ?>;">
 		</figure>
 
-		<h1><?= $page->title() ?></h1>
+		<h1>
+			<?php 
+			$titlelong = $page->titlelong();
+			$title = $page->title();
+
+			if( $titlelong != '' ) {
+				echo $titlelong;
+			} else {
+				echo $title;
+			} ?>
+		</h1>
+
 	</section>
 
 	<!-- PROJECT / ARTICLE DETAILS -->
