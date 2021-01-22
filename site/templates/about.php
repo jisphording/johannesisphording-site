@@ -4,14 +4,7 @@
 <main class="main about" role="main">
 		
 	<!-- LOCAL PAGE HEADER -->
-	<header>
-		<section class="article intro">
-			<div class="keyvisual">
-			<img src="<?= $page->url() . '/' . $page->keyvisual() ?>">
-			<h1><?= $page->title() ?></h1>
-			</div>
-		</section>
-	</header>
+    <?php snippet('section-header') ?>
 		
 	<!-- ABOUT BODY CONTENT -->
 	<div class="text">
