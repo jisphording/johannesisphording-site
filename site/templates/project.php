@@ -62,7 +62,7 @@
       
 	<div>    
 		<!-- Sub Pages Loop -->
-		<?php $site->pullRelatedPages('projects', 4) ?>
+		<?php $site->pullRelatedPages('projects', 8) ?>
 	</div>
 
 </section>
