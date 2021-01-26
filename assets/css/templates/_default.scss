@@ -157,6 +157,38 @@ article:first-of-type p {
     margin-bottom: 1rem;
 }
 
+// MODALS
+.modal {
+    display: block;
+    position: fixed;
+    background: var(--color-black);
+    color: var(--color-white);
+    z-index: 99999;
+    padding: 1rem;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+#modal--gdpr {
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#modal--translation {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: .25rem;
+}
+
+.translation--img {
+    width: 1.6rem;
+    height: auto;
+}
+
 // -----  KEYVISUAL TREATMENT  ----------------------------------------------- //
 // --------------------------------------------------------------------------- //
 
