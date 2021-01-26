@@ -27,6 +27,9 @@
 	</section>
 </footer>
 
+<!-- MODAL - COOKIES & GDPR INFO LINK -->
+<?php snippet('cookies') ?>
+
 <!-- ADDITIONAL LINKS -->
 <!-- Currently set to load synch because of dependent scripts. Has to be reworked -->
 <?= js('dist/script.js', ['async' => false]) ?>
