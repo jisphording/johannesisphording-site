@@ -50,3 +50,53 @@ window.addEventListener('scroll', function(e) {
 
   new_scroll_position = last_scroll_position;
 });
+
+// MODAL - COOKIES & GDPR INFO LINK
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+// Get the modal
+var modal = document.getElementById("modal--gdpr");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Check if the user has visited the site before
+var userHasVisited = localStorage.getItem('visited');
+
+// Check if the user has visited the site before
+if ( userHasVisited == "yes" ) {
+    modal.style.display = "none";
+}
+
+// Set a flag that user has visited the site before
+localStorage.setItem('visited', 'yes');
+
+// MODAL - TRANSLATION
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+// Get the modal
+var modal = document.getElementById("modal--translation");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Check if the user has visited the site before
+var userHasVisited = localStorage.getItem('read_translation_info');
+
+// Check if the user has read and closed the translation info before
+if ( userHasVisited == "yes" ) {
+    modal.style.display = "none";
+}
+
+// Set a flag that user has visited the site before
+// localStorage.setItem('read_translation_info', 'yes');
