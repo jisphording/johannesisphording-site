@@ -259,12 +259,25 @@ hr::after {
 }
 
 // --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 768px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 768px) {
+    // TODO - Changing of the padding for outer whitespace occurs on too
+    // many different module parts. Maybe a variable shoul be created for that
+    .main {
+        margin-top: 13rem;
+    }
+}
+
+
+// --------------------------------------------------------------------------- //
 // MEDIA QUERY -> 1024px
 // --------------------------------------------------------------------------- //
 
 @media screen and (min-width: 1024px) {
     .main {
-        margin-top: 5.5rem; // offset menu animation
+        margin-top: 6.5rem; // offset menu animation
         margin-bottom: 3rem;
     }
 }
@@ -275,7 +288,7 @@ hr::after {
 
 @media screen and (min-width: 1280px) {
     .main {
-        margin-top: 7rem; // offset menu animation
+        margin-top: 8rem; // offset menu animation
     }
 
     article {
