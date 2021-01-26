@@ -2,7 +2,7 @@
 <nav class="languages" role="navigation">
 
 	<ul class="languages-menu">
-		<?php foreach($kirby->languages()->without('it')->without('es') as $language): ?>
+		<?php foreach($kirby->languages()->without('es') as $language): ?>
 
 			<!-- Menu Item -->
 			<li class="menu-item" <?php e($kirby->language() == $language, ' class="is-active"') ?>>
