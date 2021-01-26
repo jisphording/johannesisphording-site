@@ -8,6 +8,8 @@ return array (
   'name' => 'Deutsch',
   'translations' => [
     'About' => 'Über mich',
+    'Flag' => 'emoji_flag_germany',
+    'More Information' => 'Mehr Informationen',
     'Project Description' => 'Projektbeschreibung',
     'Recent articles' => 'Aktuelle Artikel',
     'Related projects' => 'Ähnliche Projekte',
