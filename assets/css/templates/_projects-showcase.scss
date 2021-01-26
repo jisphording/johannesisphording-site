@@ -4,6 +4,12 @@
 // PROJECTS SHOWCASE SECTION
 // --------------------------------------------------------------------------- //
 
+// small text above article section for languages without translation
+.intro.text.articles {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
 .projects__showcase {
     // Overwrite defaults
     h1 {
