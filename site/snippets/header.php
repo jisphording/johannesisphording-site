@@ -42,6 +42,9 @@
 
 	<!-- PAGE WRAPPER (closed in footer) -->
 	<div class="page page--<?= $page->uri() ?>">
+
+		<!-- MODAL - TRANSLATION -->
+		<?php snippet('translation') ?>
 	  
 		<!-- LOCAL PAGE HEADER -->
 		<header id="header" class="header" role="banner">
