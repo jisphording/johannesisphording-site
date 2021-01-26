@@ -66,6 +66,18 @@ footer {
 }
 
 // --------------------------------------------------------------------------- //
+// MEDIA QUERY -> 1680px
+// --------------------------------------------------------------------------- //
+
+@media screen and (min-width: 1680px) {
+    footer {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+
+// --------------------------------------------------------------------------- //
 // MEDIA QUERY -> 1920px
 // --------------------------------------------------------------------------- //
 
@@ -82,8 +94,8 @@ footer {
 
 @media screen and (min-width: 2160px) {
     footer {
-        padding-left: 14rem;
-        padding-right: 14rem;
+        padding-left: 15rem;
+        padding-right: 15rem;
 
         .section__bottom {
             font-size: .6rem;
