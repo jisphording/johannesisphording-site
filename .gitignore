@@ -17,6 +17,7 @@ ffmpeg2pass-0.log
 # ---------------
 /.cache
 /dist/*
+/assets/threejs/libs/*
 
 # Do not track Kirby CMS and Media Files in Repository
 # ---------------
