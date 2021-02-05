@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Personal Portfolio of Berlin Based Designer Johannes Isphording",
   "main": "index.php",
+  "browserslist": [
+    "since 2018-01"
+  ],
   "pwaManifest": {
     "name": "Offline Portfolio of Berlin Based Designer Johannes Isphording",
     "shortName": "Johannes Isphording - Offline",
@@ -28,14 +31,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "del-cli dist/*",
-    "build": "npm run clean && npm run build:sass && npm run imagemin && npm run build:parcel && npm run build:sw",
+    "build": "npm run clean && npm run build:sass && npm run imagemin && npm run build:parcel && npm run build:sw && npm run build:three",
     "build:sass": "sass assets/css:dist --style compressed",
     "build:parcel": "parcel build assets/js/script.js -d dist --public-url /dist",
+    "build:three": "parcel build assets/threejs/* -d dist --public-url /dist/assets",
     "build:sw": "parcel build assets/js/serviceworker.js -d dist --public-url /dist",
     "build:video": "node utils/ffmpeg.js",
     "watch": "concurrently --kill-others \"npm run watch:sass\" \"npm run watch:parcel\"",
     "watch:sass": "sass --watch assets/css:dist",
-    "watch:parcel": "parcel watch assets/js/script.js -d dist /assets",
+    "watch:parcel": "parcel watch assets/js/script.js -d dist/assets",
+    "watch:three": "parcel watch assets/threejs/isphording-inneneinrichtung.js -d dist/assets",
     "imagemin": "node utils/imagemin.js"
   },
   "repository": {
@@ -68,5 +73,9 @@
     "parcel-plugin-pwa-manifest": "^3.0.10",
     "sass": "^1.32.0",
     "sass-lint": "^1.13.1"
+  },
+  "dependencies": {
+    "assets": "^3.0.1",
+    "libs": "^0.1.2"
   }
 }
