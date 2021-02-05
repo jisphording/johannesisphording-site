@@ -33,6 +33,11 @@
 <!-- ADDITIONAL LINKS -->
 <!-- Currently set to load synch because of dependent scripts. Has to be reworked -->
 <?= js('dist/script.js', ['async' => false]) ?>
+
+<!-- SITE SPECIFIC SCRIPTS -->
+<?php if($page->uid() == 'isphording-inneneinrichtung') { ?>
+	<?= js('dist/assets/isphording-inneneinrichtung.js') ?>
+<?php } ?>
   
 </body>
 </html>
