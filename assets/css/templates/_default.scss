@@ -193,7 +193,7 @@ article:first-of-type p {
 // --------------------------------------------------------------------------- //
 
 // Create a hidden pseudo-element that projects a fading shadow over the image
-// include the shadow for the end state
+/* include the shadow for the end state
 .keyvisual::before {
     content: '';
     position: absolute;
@@ -210,7 +210,7 @@ article:first-of-type p {
 // Fade in the pseudo-element with the bigger shadow
 .keyvisual:hover::before {
     opacity: 1;
-}
+} */
 
 // -----  CHAPTER LINES SEPERATING LONG TEXTS  ------------------------------- //
 // --------------------------------------------------------------------------- //
