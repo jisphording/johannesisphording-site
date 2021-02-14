@@ -34,7 +34,7 @@
     "build": "npm run clean && npm run build:sass && npm run imagemin && npm run build:parcel && npm run build:sw && npm run build:three",
     "build:sass": "sass assets/css:dist --style compressed",
     "build:parcel": "parcel build assets/js/script.js -d dist --public-url /dist",
-    "build:three": "parcel build assets/threejs/* -d dist --public-url /dist/assets",
+    "build:three": "cpy assets/threejs/libs/ ./dist/ --parents && parcel build assets/threejs/* -d dist --public-url /dist/assets",
     "build:sw": "parcel build assets/js/serviceworker.js -d dist --public-url /dist",
     "build:video": "node utils/ffmpeg.js",
     "watch": "concurrently --kill-others \"npm run watch:sass\" \"npm run watch:parcel\"",
@@ -62,6 +62,7 @@
   "homepage": "https://johannesisphording.de",
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "cpy-cli": "^3.1.1",
     "del": "^6.0.0",
     "del-cli": "^3.0.1",
     "ffmpeg-cli": "^2.7.1",
@@ -71,7 +72,7 @@
     "imagemin-webp": "^5.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-pwa-manifest": "^3.0.10",
-    "sass": "^1.32.0",
+    "sass": "^1.32.6",
     "sass-lint": "^1.13.1"
   },
   "dependencies": {
