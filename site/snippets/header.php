@@ -41,7 +41,7 @@
 <body class="loading">
 
 	<!-- PAGE WRAPPER (closed in footer) -->
-	<div class="page page--<?= $page->uri() ?>">
+	<div class="page page--<?php $uri = $page->uri(); echo( substr($uri, strrpos($uri, '/') + 1)); ?>">
 
 		<!-- MODAL - TRANSLATION -->
 		<?php snippet('translation') ?>
