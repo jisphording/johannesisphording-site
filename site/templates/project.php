@@ -45,13 +45,44 @@
 		<!-- PROJECT GALLERY -->
 		<ul class="project__single--gallery">
 			<?php
+			// The project gallery pulls in all images from the content folder. 
+			// Before an image is rendered to the page it's checked for a video with the same name as the image on the server.
+			// If a video is present, the video is shown instead of the image
+			// TODO: Graceful degradation -> Show the image as long as the video is loading. When video has loaded, show video. 
+
 			// Filtering images from backend
-			foreach($page->images()->filterBy('extension', 'webp')->filterBy('filename', '!*=', '_keyvisual')->filterBy('filename', '!*=', 'intro-img') as $image): ?>
-			<li>
-				<figure>
-					<img src="<?= $image->url() ?>" alt="<?= $page->title() ?>">
-				</figure>
-			</li>
+			foreach($page->images()->filterBy('extension', 'webp')->filterBy('filename', '!*=', '_keyvisual')->filterBy('filename', '!*=', 'intro-img') as $image): 
+
+			// Writing filename to video variable while stripping the file extension
+            // This is achieved with basename and the respective kirbyobjects. 
+			// The dot has to be 'manually' connected to the extension
+			// TODO: video check is used multiple times, should be moved to site methods plugin
+            $video_dir = "video/";
+			$file_video = NULL;
+			$file_video = $image->filename();
+			$file_video = substr($file_video, 0, strrpos($file_video, '.')) . ".webm";
+
+			// Testing if a video with the same filename exists 
+			$filetocheck = $video_dir . $file_video;
+			// If exists -> put video here
+			if ( file_exists( $filetocheck )) { ?>
+				<li>
+					<figure>
+						<video playsinline autoplay muted loop>
+                        	<source src="<?= $site->url('') . '/' . $video_dir . $file_video ?>" type="video/webm">
+                    	</video>
+					</figure>
+				</li>
+			<?php } // endif
+
+			// if no video than just put the image
+			else { ?>
+				<li>
+					<figure>
+						<img src="<?= $image->url() ?>" alt="<?= $page->title() ?>">
+					</figure>
+				</li>
+			<?php } // endelse ?>
 			<?php endforeach ?>
 		</ul>
 	</div>
