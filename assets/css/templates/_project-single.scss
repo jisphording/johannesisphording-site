@@ -20,6 +20,15 @@
     }
 } 
 
+// SPECIFIG PAGE CHANGES
+.page--isphording-inneneinrichtung {
+    .project__single--gallery {
+        li {
+            margin-bottom: 0;
+        }
+    }
+}
+
 // --------------------------------------------------------------------------- //
 // MEDIA QUERY -> 480px
 // --------------------------------------------------------------------------- //
